@@ -1,0 +1,22 @@
+{
+  "name": "chat-grad-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "Dave Ogle",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "winston": "^2.3.1"
+  }
+}
