@@ -1,3 +1,7 @@
+/**
+ * Handle logging with Winston
+ */
+
 var winston = require("winston");
 var fs = require("fs");
 var date = new Date();
@@ -8,6 +12,7 @@ if (!fs.existsSync("logs")) {
     fs.mkdirSync("logs");
 }
 
+// Create a logger
 var logger = new(winston.Logger)({
     transports: [
         new(winston.transports.Console)({

@@ -1,3 +1,7 @@
+/**
+ * Example controller. See `pathOne.js`
+ */
+
 var express = require("express");
 var router = express.Router();
 var modelOne = require("../models/modelOne");

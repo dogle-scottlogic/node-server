@@ -1,3 +1,7 @@
+/**
+ * Handle connection to the database
+ */
+
 var winston = require("./logger");
 // var MongoClient = require("mongodb").MongoClient;
 var url = process.env.DB_URI || "mongodb://my-url-string";

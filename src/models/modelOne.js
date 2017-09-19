@@ -1,3 +1,7 @@
+/**
+ * Example model. Will retrive data and return to controller.
+ */
+
 var db = require("../services/db");
 var winston = require("../services/logger");
 

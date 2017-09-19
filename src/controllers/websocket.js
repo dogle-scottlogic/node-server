@@ -1,3 +1,7 @@
+/**
+ * Handle websocket connection here if using.
+ */
+
 // var express = require("express");
 // var router = express.Router();
 // var winston = require("../services/logger");

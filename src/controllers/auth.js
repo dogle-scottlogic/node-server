@@ -1,8 +1,12 @@
-var express = require("express");
-var router = express.Router();
-var session = require("express-session");
-var sessions = {};
-var winston = require("../services/logger");
+/**
+ * Handle calls to /auth
+ */
+
+// var express = require("express");
+// var router = express.Router();
+// var session = require("express-session");
+// var sessions = {};
+// var winston = require("../services/logger");
 
 // router.get("/auth", function(req, res) {
 //     var loggedIn = sessions[req.session.oauthAccessToken];
@@ -17,7 +21,7 @@ var winston = require("../services/logger");
 //     }
 // });
 
-module.exports = {
-    sessions: sessions,
-    router: router
-};
+// module.exports = {
+//     sessions: sessions,
+//     router: router
+// };

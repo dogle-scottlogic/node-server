@@ -2,5 +2,4 @@ node_modules/
 build_artifacts/
 debug.log
 npm-debug.log
-.log
 *.log

@@ -1,20 +1,24 @@
+/**
+ * Handle setting up a connection to socket.io
+ */
+
 // var io = require("socket.io");
-var http = require("http");
+// var http = require("http");
 
 // var ws = null;
 
-var init = function(app) {
-    var server = http.createServer(app);
+// var init = function(app) {
+    // var server = http.createServer(app);
     // ws = io(server);
-    return server;
-};
+    // return server;
+// };
 
 // var getWS = function() {
 //     return ws;
 // };
 
-module.exports = {
-    //ws: ws,
-    //getWS: getWS,
-    init: init
-};
+// module.exports = {
+    // ws: ws,
+    // getWS: getWS,
+    // init: init
+// };
