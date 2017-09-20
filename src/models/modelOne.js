@@ -5,12 +5,15 @@
 var db = require("../services/db");
 var winston = require("../services/logger");
 
-// Get the list of tracked Words
 exports.getThing = function (done) {
-    (done('some data'));
+    db.executeQuery('SELECT * FROM films').then((res) => {
+        done(res);
+    }).catch((err) => {
+        console.log(err);
+        winston.error(err);
+    });
 };
 
-// Get the list of tracked users
 exports.setThing = function (thing, done) {
     done('ok');
 };
