@@ -25,6 +25,12 @@ exports.connect = function (done) {
         port: '32768'
     });
 
+    pool.on('error', (err, client) => {
+        console.error('Unexpected error on idle client', err);
+        winston.error('Unexpected error on idle client', err);
+        process.exit(-1)
+    })
+
     state.db = pool;
     done();
 };
@@ -39,13 +45,16 @@ exports.set = function (db) {
     return;
 };
 
-exports.executeQuery = function (query) {
-    return new Promise(function (resolve, reject) {
-        state.db.query(query, (err, res) => {
-            state.db.end();
-            err ? reject(err) : resolve(res);
+exports.executeQuery = function (query, params) {
+    console.log(query);
+    return state.db.connect().then(client => {
+        return new Promise(function (resolve, reject) {
+            client.query(query, params, (err, res) => {
+                client.release();
+                err ? reject(err) : resolve(res);
+            });
         });
-    });
+    })
 }
 
 exports.close = function (done) {
